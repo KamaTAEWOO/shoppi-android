@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">shoppi-android</string>
+    <string name="title_product_detail_image">상품설명</string>
+
+    <!--  Unit  -->
+    <string name="unit_discount_rate">%d%%</string>
+    <string name="unit_discount_currency">%s원</string>
+
+    <!--  Navigation  -->
+    <string name="label_category">카테고리</string>
+    <string name="label_home_icon">홈</string>
+    <string name="label_cart">장바구니</string>
+
+    <!--  Image description  -->
+    <string name="description_appbar_home_icon">홈화면 앱바 아이콘</string>
+    <string name="description_home_banner_image">홈화면 배너 이미지</string>
+    <string name="description_home_banner_thumbnail">홈화면 배너 썸네일</string>
+    <string name="description_product_thumbnail">상품 상세 대표 이미지</string>
+    <string name="description_product_detail_image">상품 상세 이미지</string>
+    <string name="description_product_representative_image">상품 이미지</string>
+    <string name="description_category_thumbnail">카테고리 썸네일</string>
+    <string name="description_cart_item_thumbnail">장바구니에 추가한 상품의 썸네일 이미지</string>
+    <string name="description_btn_delete_cart_item">장바구니 상품 삭제 버튼</string>
+    <string name="description_btn_minus_cart_item">장바구니 상품 갯수 차감 버튼</string>
+    <string name="description_btn_plus_cart_item">장바구니 상품 갯수 증가 버튼</string>
+
+    <!--  Category  -->
+    <string name="label_category_new">NEW</string>
+    <string name="label_category_n">N</string>
+
+    <!--  Cart  -->
+    <string name="label_cart_purchase_button">선택한 상품 주문하기</string>
+
+    <!--  Product Detail  -->
+    <string name="label_product_price_description">쿠폰 적용가</string>
+    <string name="label_add_cart">장바구니 담기</string>
+    <string name="dialog_title_add_cart">장바구니에 상품이 담겼습니다</string>
+    <string name="dialog_button_label_confirm">확인</string>
 </resources>
