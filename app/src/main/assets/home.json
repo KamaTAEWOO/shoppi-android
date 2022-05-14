@@ -1,0 +1,75 @@
+{
+  "title": {
+    "text": "IVY님, 이런 상품\n어때요?",
+    "icon_url": "https://user-images.githubusercontent.com/20774764/149948208-1a6c3d0c-f0fa-4903-803f-ac3e71ed299c.png"
+  },
+  "top_banners": [
+    {
+      "background_image_url": "https://user-images.githubusercontent.com/20774764/149948250-8968498e-e204-4b35-8d52-8d9aecd1d54a.png",
+      "badge": {
+        "label": "기획전",
+        "background_color": "#52514d"
+      },
+      "label": "따스한 겨울\n준비하기",
+      "product_detail": {
+        "brand_name": "twg. official",
+        "label": "캐시미어 100% 터틀넥 스웨터",
+        "discount_rate": 9,
+        "price": 102000,
+        "thumbnail_image_url": "https://user-images.githubusercontent.com/20774764/149948264-a5595830-0ce1-4052-892e-3e846ffc0b29.png",
+        "product_id": "FW-twg-sweater-1"
+      }
+    },
+    {
+      "background_image_url": "https://user-images.githubusercontent.com/20774764/149948259-9806ff37-0719-4e34-b11f-be0056c7fea8.png",
+      "badge": {
+        "label": "기획전",
+        "background_color": "#967a6d"
+      },
+      "label": "나만의\n홈 오피스",
+      "product_detail": {
+        "brand_name": "Desk",
+        "label": "슬림 데스크 800",
+        "discount_rate": 16,
+        "price": 160000,
+        "thumbnail_image_url": "https://user-images.githubusercontent.com/20774764/149948262-1aa6b506-b1a7-4531-bead-8ac061b6ce71.png",
+        "product_id": "desk-1"
+      }
+    }
+  ],
+  "promotions": {
+    "title": {
+      "text": "오늘의 특가"
+    },
+    "items": [
+      {
+        "label": "[19차 리오더] 페이크 레더 숏 테일러 자켓 블랙",
+        "discount_rate": 10,
+        "price": 90000,
+        "representative_image_url": "https://user-images.githubusercontent.com/20774764/153292649-3312f896-5fe1-4f43-8be8-7501b4fe16da.png",
+        "product_id": "jacket_1"
+      },
+      {
+        "label": "캐시미어 100% 터틀넥 스웨터",
+        "discount_rate": 15,
+        "price": 70000,
+        "representative_image_url": "https://user-images.githubusercontent.com/20774764/153292663-4fd925b8-4072-41fe-8212-dc6563094c20.png",
+        "product_id": "sweater_1"
+      },
+      {
+        "label": "반팔 스트라이프 스웨터",
+        "discount_rate": 20,
+        "price": 30000,
+        "representative_image_url": "https://user-images.githubusercontent.com/20774764/153292667-43eb3b84-f1a2-4a1e-984d-b138aca22575.png",
+        "product_id": "sweater_2"
+      },
+      {
+        "label": "화이트 스포츠 점퍼",
+        "discount_rate": 20,
+        "price": 150000,
+        "representative_image_url": "https://user-images.githubusercontent.com/20774764/153292673-bca0dc6c-a1e4-4134-bb9a-4b018d17e9cd.png",
+        "product_id": "sports_1"
+      }
+    ]
+  }
+}
