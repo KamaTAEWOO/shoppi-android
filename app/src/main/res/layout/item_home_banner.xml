@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_banner_image"
+        android:layout_width="312dp"
+        android:layout_height="343dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_banner_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/bg_banner_product_detail"
+        app:layout_constraintEnd_toEndOf="@id/iv_banner_image"
+        app:layout_constraintStart_toStartOf="@id/iv_banner_image"
+        tools:text="따스한 겨울\n준비하기" />
+
+    <TextView
+        android:id="@+id/tv_banner_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="7dp"
+        android:paddingStart="7dp"
+        android:paddingTop="1dp"
+        android:paddingEnd="7dp"
+        android:paddingBottom="1dp"
+        android:textColor="@color/shoppi_white"
+        app:layout_constraintBottom_toTopOf="@id/tv_banner_title"
+        app:layout_constraintStart_toStartOf="@id/iv_banner_image"
+        tools:background="@color/shoppi_grey_02"
+        tools:text="기획전"
+
+        />
+
+
+    <View
+        android:id="@+id/bg_banner_product_detail"
+        android:layout_width="288dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_white"
+        app:layout_constraintBottom_toBottomOf="@id/iv_banner_image"
+        app:layout_constraintEnd_toEndOf="@id/iv_banner_image"
+        app:layout_constraintStart_toStartOf="@id/iv_banner_image" />
+
+    <ImageView
+        android:id="@+id/iv_banner_detail_thumbnail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/bg_banner_product_detail"
+        app:layout_constraintTop_toTopOf="@id/bg_banner_product_detail" />
+
+    <TextView
+        android:id="@+id/tv_banner_detail_brand_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@id/bg_banner_product_detail"
+        app:layout_constraintStart_toEndOf="@id/iv_banner_detail_thumbnail"
+        app:layout_constraintTop_toTopOf="@id/bg_banner_product_detail"
+        tools:text="twg.official" />
+
+    <TextView
+        android:id="@+id/tv_banner_detail_product_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_banner_detail_brand_label"
+        app:layout_constraintStart_toStartOf="@id/tv_banner_detail_brand_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_banner_detail_brand_label"
+        tools:text="캐시미어 100% 터틀넥 스웨터" />
+
+    <TextView
+        android:id="@+id/tv_banner_product_detail_discount_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/tv_banner_detail_product_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_banner_detail_product_label"
+        tools:text="9%" />
+
+    <TextView
+        android:id="@+id/tv_banner_detail_product_discount_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_banner_product_detail_discount_rate"
+        app:layout_constraintStart_toEndOf="@id/tv_banner_product_detail_discount_rate"
+        tools:text="89,000원" />
+
+    <TextView
+        android:id="@+id/tv_banner_detail_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_banner_detail_product_discount_price"
+        app:layout_constraintStart_toEndOf="@id/tv_banner_detail_product_discount_price"
+        tools:text="100000원" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

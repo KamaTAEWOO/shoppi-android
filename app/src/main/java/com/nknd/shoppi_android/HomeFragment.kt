@@ -6,9 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.Gson
+import com.shoppi.app.model.BannerBadge
 import org.json.JSONObject
+import org.w3c.dom.Text
 
 class HomeFragment : Fragment() {
 
@@ -23,27 +31,39 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val button = view.findViewById<Button>(R.id.btn_enter_product_detail)
-        button.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_product_detail)
-
-            // Transaction 추가 삭제 교체를 요청하는 작업
-//            val transaction = parentFragmentManager.beginTransaction()
-//            transaction.add(R.id.container_main, ProductDetailFragment())
-//            transaction.commit()
-        }
+        val toolbarTitle = view.findViewById<TextView>(R.id.toolbar_home_title)
+        val toolbarIcon = view.findViewById<ImageView>(R.id.toolbar_home_icon)
+        val viewpager = view.findViewById<ViewPager2>(R.id.viewpager_home_banner)
+        val viewpagerIndicator = view.findViewById<TabLayout>(R.id.viewpager_home_banner_indicator)
 
         val assetLoader = AssetLoader()
-        val homeData = assetLoader.getJsonString(requireContext(), "home.json")
-        Log.d("homeData", homeData ?: "")
+        val homeJsonString = assetLoader.getJsonString(requireContext(), "home.json")
+        Log.d("homeData", homeJsonString ?: "")
 
-        if (!homeData.isNullOrEmpty()) {
-            val jsonObject = JSONObject(homeData)
-            val title = jsonObject.getJSONObject("title")
-            val text = title.getString("text")
-            val iconUrl = title.getString("icon_url")
-            val titleValue = Title(text, iconUrl)
-            // titleValue.text
+        if (!homeJsonString.isNullOrEmpty()) {
+            val gson = Gson()
+            val homeData = gson.fromJson(homeJsonString, HomeData::class.java)
+
+            toolbarTitle.text = homeData.title.text
+            GlideApp.with(this)
+                .load(homeData.title.iconUrl)
+                .into(toolbarIcon)
+
+            viewpager.adapter = HomeBannerAdapter().apply {
+                submitList(homeData.topBanners)
+            }
+            val pageWidth = resources.getDimension(R.dimen.viewpager_item_width)
+            val pageMargin = resources.getDimension(R.dimen.viewpager_item_margin)
+            val screenWidth = resources.displayMetrics.widthPixels
+            val offset = screenWidth - pageWidth - pageMargin
+
+            viewpager.offscreenPageLimit = 3
+            viewpager.setPageTransformer { page, position ->
+                page.translationX = position * - offset
+            }
+            TabLayoutMediator(viewpagerIndicator, viewpager) { tab, position ->
+
+            }.attach()
         }
     }
 }
